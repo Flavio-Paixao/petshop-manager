@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>PetShop - Home</title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">🐾 PetShop Manager</a>
+        <div class="navbar-nav">
+            <a class="nav-link active" href="{% url 'home' %}">Início</a>
+            <a class="nav-link" href="{% url 'lista_pets' %}">Pacientes</a>
+            <a class="nav-link" href="{% url 'cadastrar_pet' %}">Novo Cadastro</a>
+        </div>
+    </div>
+</nav>
+    <div class="container vh-100 d-flex align-items-center justify-content-center">
+        <div class="text-center p-5 bg-white rounded shadow-lg" style="border-bottom: 8px solid #198754;">
+            <h1 class="display-4 text-success mb-3">🐾 Gestão PetShop</h1>
+            <p class="lead text-muted mb-5">Bem-vindo ao sistema de controle da sua clínica!</p>
+            
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                <a href="{% url 'cadastrar_pet' %}" class="btn btn-success btn-lg px-4 gap-3">
+                    ➕ Novo Cadastro
+                </a>
+                <a href="{% url 'lista_pets' %}" class="btn btn-outline-secondary btn-lg px-4">
+                    📋 Ver Pacientes
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
